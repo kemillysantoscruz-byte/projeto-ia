@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstudeHub - Protótipo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones externos para diferenciar os formatos de mídia -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- Barra de Navegação Superior -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i> <span>EstudeHub</span>
+        </div>
+        <div class="user-profile">
+            <span>Olá, Vestibulando!</span>
+            <div class="avatar">V</div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-container">
+        
+        <!-- Cabeçalho do Tema Atual -->
+        <section class="theme-header">
+            <a href="#" class="back-link"><i class="fa-solid fa-arrow-left"></i> Voltar aos temas</a>
+            <h1>Aula de Genética</h1>
+            <p class="subtitle">Biologia • 4 materiais unificados neste tópico</p>
+        </section>
+
+        <!-- Grade de Materiais (O Hub) -->
+        <section class="materials-grid">
+            
+            <!-- Card 1: PDF -->
+            <div class="material-card" data-type="pdf" onclick="openMaterial('PDF de Apoio', 'Carregando o resumo teórico de Introdução à Genética Mendoniana...')">
+                <div class="card-icon pdf-icon">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Resumo_Genetica.pdf</h3>
+                    <span class="badge pdf-badge">PDF da Aula</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+
+            <!-- Card 2: Vídeo -->
+            <div class="material-card" data-type="video" onclick="openMaterial('Vídeo do YouTube', 'Abrindo player integrado: Segunda Lei de Mendel - Canal de Revisão Ao Vivo.')">
+                <div class="card-icon video-icon">
+                    <i class="fa-solid fa-video"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Videoaula - Leis de Mendel</h3>
+                    <span class="badge video-badge">Link do YouTube</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+
+            <!-- Card 3: Foto da Lousa -->
+            <div class="material-card" data-type="image" onclick="openMaterial('Foto do Quadro', 'Exibindo imagem em alta resolução tirada da lousa no dia 15/10.')">
+                <div class="card-icon image-icon">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Quadro_Cruzamentos.jpg</h3>
+                    <span class="badge image-badge">Foto da Lousa</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+
+            <!-- Card 4: Anotações Próprias -->
+            <div class="material-card" data-type="notes" onclick="openMaterial('Minhas Anotações', 'Abrindo editor de texto: Dúvidas frequentes sobre Genótipo vs Fenótipo.')">
+                <div class="card-icon notes-icon">
+                    <i class="fa-solid fa-note-sticky"></i>
+                </div>
+                <div class="card-info">
+                    <h3>Meus Macetes para a Prova</h3>
+                    <span class="badge notes-badge">Notas Pessoais</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Janela Modal (Simulador de visualização do material) -->
+    <div id="materialModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Título do Material</h2>
+            <div class="modal-body">
+                <p id="modalBodyText">Conteúdo simulado...</p>
+                <div class="placeholder-box">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Área do Visualizador Integrado (Protótipo)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

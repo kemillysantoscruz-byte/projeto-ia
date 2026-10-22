@@ -1,0 +1,203 @@
+/* Configurações Globais e Cores Neas (Foco em Clareza) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* Barra de Navegação */
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4f46e5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #4f46e5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Container do Conteúdo */
+.main-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho do Tema */
+.theme-header {
+    margin-bottom: 25px;
+}
+
+.back-link {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.back-link:hover {
+    color: #4f46e5;
+}
+
+.theme-header h1 {
+    font-size: 1.8rem;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* Cards do Hub */
+.materials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.material-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.material-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-color: #4f46e5;
+}
+
+/* Ícones das Mídias */
+.card-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-right: 15px;
+}
+
+.pdf-icon { background-color: #fef2f2; color: #ef4444; }
+.video-icon { background-color: #f0fdf4; color: #22c55e; }
+.image-icon { background-color: #eff6ff; color: #3b82f6; }
+.notes-icon { background-color: #fef9c3; color: #eab308; }
+
+/* Informações dos Cards */
+.card-info {
+    flex-grow: 1;
+}
+
+.card-info h3 {
+    font-size: 1rem;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+/* Badges Identificadoras */
+.badge {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.pdf-badge { background-color: #fee2e2; color: #991b1b; }
+.video-badge { background-color: #dcfce7; color: #166534; }
+.image-badge { background-color: #dbeafe; color: #1e40af; }
+.notes-badge { background-color: #fef08a; color: #854d0e; }
+
+.arrow {
+    color: #d1d5db;
+}
+
+/* Sistema de Janela Modal (Pop-up) */
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #9ca3af;
+}
+
+.close-btn:hover { color: #000; }
+
+.modal-body {
+    margin-top: 20px;
+}
+
+.placeholder-box {
+    margin-top: 15px;
+    background-color: #f3f4f6;
+    border: 2px dashed #d1d5db;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #6b7280;
+    border-radius: 8px;
+}
